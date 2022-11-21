@@ -1,0 +1,6 @@
+cython
+efficientnet_pytorch
+torchvision
+umap-learn
+hdbscan
+tqdm
