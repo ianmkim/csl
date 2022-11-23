@@ -10,10 +10,10 @@ def dim_reduction(data_pts:list[list], init="spectral") -> list[list]:
     return embeddings
 
 
-def cluster(embeddings:list[list]) -> list[list]:
+def cluster(embeddings:list[list]) -> list[int]:
     clusterer = hdbscan.HDBSCAN()
     cluster_labels = clusterer.fit(embeddings)
-    return cluster_labels
+    return cluster_labels.labels_
 
 if __name__ == "__main__":
     from os import listdir
